@@ -3,8 +3,8 @@ import './style.css';
 import { Routes, Route, Link } from 'react-router-dom';
 import Layout from './layout/Layout';
 import Home from './pages/Home';
-import About from './pages/About';
-import Contact from './pages/Contact';
+import Dashboard from './pages/Dashboard';
+import Dashboard from './pages/Dashboard';
 
 export default function App() {
   return (
@@ -14,8 +14,8 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/profile" element={<Dashboard />} />
         </Route>
       </Routes>
     </div>
