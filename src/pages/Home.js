@@ -1,9 +1,10 @@
 import React from 'react';
+import Auth from '../components/Auth';
 
-const Home = () => {
+const Home = ({ token, onLogin }) => {
   return (
     <>
-      <h1>Home</h1>
+      <Auth token={token} onLogin={onLogin} />
     </>
   );
 };

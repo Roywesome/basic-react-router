@@ -1,9 +1,10 @@
 import React from 'react';
 
-const Dashboard = () => {
+const Dashboard = ({ token }) => {
   return (
     <>
-      <h1> Dashboard</h1>
+      <h1> Dashboard (Private)</h1>
+      {token && <div> Authenticated as {token}</div>}
     </>
   );
 };
