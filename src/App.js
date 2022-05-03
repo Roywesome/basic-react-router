@@ -13,6 +13,7 @@ import Home from './pages/Home';
 import Dashboard from './pages/Dashboard';
 import Profile from './pages/Profile';
 import NoMatch from './components/NoMatch';
+import ProtectedRoute from './components/ProtectedRoute';
 
 const getUserId = () => {
   let id;
@@ -85,14 +86,3 @@ export default function App() {
 const fakeAuth = new Promise((resolve, reject) => {
   setTimeout(() => resolve('2342f2f1d131rf12'), 300);
 });
-
-//Rutas protegidas
-const ProtectedRoute = ({ children, token }) => {
-  const location = useLocation();
-
-  if (!token) {
-    return <Navigate to="/home" replace state={{ from: location }} />;
-  }
-
-  return children;
-};
